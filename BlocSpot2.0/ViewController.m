@@ -17,6 +17,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    // Make the controller the delegate for the map view
+    self.mapView.delegate = self;
+    
+    // Ensure you can see the user's location in the map view
+    [self.mapView setShowsUserLocation:YES];
+    
+    // Instantiate a location object
+    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+    
+    // Make this controller the delegate for the location manager
+    [locationManager setDelegate:self];
+    
+    // Set parameters for the location object
+    [locationManager setDistanceFilter:kCLDistanceFilterNone];
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
