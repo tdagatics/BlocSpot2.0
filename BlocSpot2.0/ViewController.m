@@ -22,7 +22,7 @@
     zoomLocation.longitude = -71.057899;
     
     
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 1000, 1000);
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 10000, 10000);
     [_mapView setRegion:viewRegion animated:YES];
     _mapView.showsUserLocation = YES;
 
@@ -36,6 +36,7 @@
     [self.mapView setShowsUserLocation:YES];
     
     // Instantiate a location object
+    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
     
     // Make this controller the delegate for the location manager
     [locationManager setDelegate:self];
@@ -47,6 +48,7 @@
 }
 
 - (IBAction)searchButtonPressed:(id)sender {
+    
     [self.searchTextField resignFirstResponder];
     NSString *searchString = self.searchTextField.text;
     NSLog(@"Just checking: %@", searchString);
@@ -67,32 +69,13 @@
             [_mapView addAnnotation:annotation];
         }
     }];
+    
+    
 
-    
-    
 }
 
 #pragma mark - MKMapViewDelegate Methods
--(void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views {
-    MKCoordinateRegion region;
-    region = MKCoordinateRegionMakeWithDistance(locationManager.location.coordinate, 10000, 10000);
-    
-    [mapView setRegion:region animated:YES];
-}
 
--(void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
-{
-    // Get the east and west points on the map so you can calculate the distance (zoom level) of the current map view.
-    MKMapRect mRect= self.mapView.visibleMapRect;
-    MKMapPoint eastMapPoint = MKMapPointMake(MKMapRectGetMinX(mRect), MKMapRectGetMidY(mRect));
-    MKMapPoint westMapPoint = MKMapPointMake(MKMapRectGetMaxX(mRect), MKMapRectGetMidY(mRect));
-    
-    // Set your current distance instance variable
-    currenDist = MKMetersBetweenMapPoints(eastMapPoint, westMapPoint);
-    
-    // Set your current center point on the map instance variable
-    currentCentre = self.mapView.centerCoordinate;
-}
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
