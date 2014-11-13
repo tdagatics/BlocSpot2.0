@@ -1,2 +1,2 @@
 source 'https://github.com/CocoaPods/Specs.git'
-pod 'AFNetworking'
+pod 'AFNetworking', '~> 2.4' 

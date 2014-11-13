@@ -7,9 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h> 
+#import <CoreLocation/CoreLocation.h>
+#import "MapPoint.h"
 
-@interface ViewController : UIViewController
 
+@interface ViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+- (IBAction)searchButtonPressed:(id)sender;
 
 @end
+
+
+
+
 
