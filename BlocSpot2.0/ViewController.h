@@ -13,7 +13,9 @@
 
 @interface ViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
 
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+- (IBAction)searchButtonPressed:(id)sender;
 
 @end
 
