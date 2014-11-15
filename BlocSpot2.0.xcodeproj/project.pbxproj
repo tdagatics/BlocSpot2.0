@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		065C4EE0F0C2B7B25397E356 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDE601EC74FF7197388F1C21 /* libPods.a */; };
+		433264121A16D33C00AEFBCE /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 433264111A16D33C00AEFBCE /* SearchTableViewController.m */; };
 		434C8E8A1A1413DE00769676 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 434C8E891A1413DE00769676 /* main.m */; };
 		434C8E8D1A1413DE00769676 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 434C8E8C1A1413DE00769676 /* AppDelegate.m */; };
 		434C8E901A1413DE00769676 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434C8E8F1A1413DE00769676 /* ViewController.m */; };
@@ -30,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		433264101A16D33C00AEFBCE /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
+		433264111A16D33C00AEFBCE /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
 		434C8E841A1413DE00769676 /* BlocSpot2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlocSpot2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		434C8E881A1413DE00769676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		434C8E891A1413DE00769676 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -101,6 +104,8 @@
 				435BE8811A142EDE0021CEB3 /* MapPoint.h */,
 				435BE8821A142EDE0021CEB3 /* MapPoint.m */,
 				434C8E911A1413DE00769676 /* Main.storyboard */,
+				433264101A16D33C00AEFBCE /* SearchTableViewController.h */,
+				433264111A16D33C00AEFBCE /* SearchTableViewController.m */,
 				434C8E941A1413DE00769676 /* Images.xcassets */,
 				434C8E961A1413DE00769676 /* LaunchScreen.xib */,
 				434C8E871A1413DE00769676 /* Supporting Files */,
@@ -295,6 +300,7 @@
 				434C8E901A1413DE00769676 /* ViewController.m in Sources */,
 				435BE8831A142EDE0021CEB3 /* MapPoint.m in Sources */,
 				434C8E8D1A1413DE00769676 /* AppDelegate.m in Sources */,
+				433264121A16D33C00AEFBCE /* SearchTableViewController.m in Sources */,
 				434C8E8A1A1413DE00769676 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

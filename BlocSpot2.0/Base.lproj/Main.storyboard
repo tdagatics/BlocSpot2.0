@@ -40,7 +40,7 @@
                     <navigationItem key="navigationItem" id="XXg-S1-o8G">
                         <barButtonItem key="leftBarButtonItem" title="List" id="aS6-wj-OeH">
                             <connections>
-                                <segue destination="oPJ-P1-7N1" kind="push" id="ShX-3E-2L5"/>
+                                <segue destination="sbX-LR-Fbw" kind="push" id="Mgr-ig-g5i"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -52,47 +52,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="578.5" y="135.5"/>
+            <point key="canvasLocation" x="634.5" y="135.5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="vTM-Jo-FUx">
+        <!--Search Table View Controller-->
+        <scene sceneID="e2v-PD-x0H">
             <objects>
-                <viewController id="oPJ-P1-7N1" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hUt-TG-beg"/>
-                        <viewControllerLayoutGuide type="bottom" id="C7u-oU-NhT"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UHQ-OX-jR2">
+                <tableViewController id="sbX-LR-Fbw" customClass="SearchTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DED-ob-bF2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Y9s-EQ-Vc4">
-                                <rect key="frame" x="0.0" y="117" width="388" height="590"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPOI" id="gex-ET-0eY">
-                                        <rect key="frame" x="0.0" y="0.0" width="388" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gex-ET-0eY" id="6xY-bc-mhi">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for POI" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jBX-M5-Rab">
-                                <rect key="frame" x="16" y="79" width="343" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Ntn-e7-3I6"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="obF-Xb-g1N">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="obF-Xb-g1N" id="Kq0-3C-MNb">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sbX-LR-Fbw" id="4oF-za-qU3"/>
+                            <outlet property="delegate" destination="sbX-LR-Fbw" id="kMe-79-ke5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="NBe-H6-AnX"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="250-jb-dbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JQV-su-7dJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1065.5" y="135.5"/>
+            <point key="canvasLocation" x="1145.5" y="135.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M75-fY-Fcn">

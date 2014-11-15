@@ -69,9 +69,6 @@
             [_mapView addAnnotation:annotation];
         }
     }];
-    
-    
-
 }
 
 #pragma mark - MKMapViewDelegate Methods
