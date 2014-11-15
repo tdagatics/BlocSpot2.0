@@ -118,7 +118,7 @@
 
 -(void)makeSearchRequests
 {
-    NSURL *url = [NSURL URLWithString:@"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522,151.1957362&radius=5000&types=food&name=cruise&key=AIzaSyAK-11MCB6KfW6RRb_qXo_DKpaAyF1ybD4"];
+    NSURL *url = [NSURL URLWithString:@"https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+Sydney&key=AIzaSyAK-11MCB6KfW6RRb_qXo_DKpaAyF1ybD4"];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     //AFNetworking asynchronous url request
