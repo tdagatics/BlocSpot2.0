@@ -70,6 +70,12 @@
     }];
 }
 
+- (IBAction)listButtonPressed:(id)sender {
+    SearchTableViewController *searchTableVC = [[SearchTableViewController alloc ] init];
+  //  searchTableVC.searchTextForTableView = self.searchTextField.text;
+    [searchTableVC makeSearchRequests:self.searchTextField.text];
+}
+
 #pragma mark - MKMapViewDelegate Methods
 
 

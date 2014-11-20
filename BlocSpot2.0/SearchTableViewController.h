@@ -10,6 +10,10 @@
 
 @interface SearchTableViewController : UITableViewController
 
+@property (nonatomic, strong) NSString *searchTextForTableView;
+
+-(void)makeSearchRequests:(NSString *)searchText;
+
 @property (nonatomic, strong) NSArray *googlePlacesArrayFromAFNetworking;
 
 @end

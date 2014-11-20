@@ -7,6 +7,7 @@
 //
 
 #import "SearchTableViewController.h"
+#import "ViewController.h"
 #import "AFNetworking.h"
 
 @interface SearchTableViewController ()
@@ -19,7 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self makeSearchRequests];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     // Uncomment the following line to preserve selection between presentations.
@@ -54,7 +54,6 @@
     
     cell.textLabel.text = [tempDictionary objectForKey:@"name"];
     
-    /*
     if ([tempDictionary objectForKey:@"rating"] != NULL)
     {
         cell.detailTextLabel.text = [NSString stringWithFormat:@"Rating: %@ of 5", [tempDictionary objectForKey:@"rating"]];
@@ -64,7 +63,6 @@
     }
     
     // Configure the cell...
-    */
     
     return cell;
 }
@@ -116,10 +114,11 @@
 
 #pragma mark - AFN Requests
 
--(void)makeSearchRequests
+-(void)makeSearchRequests:(NSString *)searchText
 {
-    NSURL *url = [NSURL URLWithString:@"https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+Sydney&key=AIzaSyAK-11MCB6KfW6RRb_qXo_DKpaAyF1ybD4"];
-    
+    NSLog(@"You're looking for: %@", searchText);
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/textsearch/json?query=%@&key=AIzaSyAK-11MCB6KfW6RRb_qXo_DKpaAyF1ybD4", searchText]];
+   NSLog(@"The URL you are generating is: %@", url);
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     //AFNetworking asynchronous url request
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
