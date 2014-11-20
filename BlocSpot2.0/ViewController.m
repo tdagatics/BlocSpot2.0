@@ -44,7 +44,6 @@
     // Set parameters for the location object
     [locationManager setDistanceFilter:kCLDistanceFilterNone];
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-    
 }
 
 - (IBAction)searchButtonPressed:(id)sender {
